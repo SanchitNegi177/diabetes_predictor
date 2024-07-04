@@ -24,7 +24,7 @@ def submit():
 
     # prediction algorithm
        
-        with open('D:\Sem 4 mini project\Models\Diabetes_model_all.pkl', 'rb') as f:
+        with open('Models\Diabetes_model_xgbclassifier.pkl', 'rb') as f: # change it as per the model you want to use
             model, scaler = pickle.load(f)
 
         submitted_patient_data = [name,gender, age, hypertension, heart_disease, smoking_history, bmi, hba1c, glucose]
