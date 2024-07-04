@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Record</title>
+    <link rel="stylesheet" href="/static/result_style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Record</h1>
+        <div class="info-section">
+            <p class="info-value flex-left">Name: {{result_text[0]}}</p>
+            <p class="info-value right">Age: {{result_text[2]}} years</p>
+            <p class="info-value">Gender: {{result_text[1]}}</p>
+        </div>
+
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+            </tr>
+            
+            <tr>
+                <td>Hypertension</td>
+                <td>{{result_text[3]}}</td>
+            </tr>
+            <tr>
+                <td>Heart Disease</td>
+                <td>{{result_text[4]}}</td>
+            </tr>
+            <tr>
+                <td>Smoking History</td>
+                <td>{{result_text[5]}}</td>
+            </tr>
+            <tr>
+                <td>BMI</td>
+                <td>{{result_text[6]}}</td>
+            </tr>
+            <tr>
+                <td>HbA1c level</td>
+                <td>{{result_text[7]}} %</td>
+            </tr>
+            <tr>
+                <td>Glucose level</td>
+                <td>{{result_text[8]}} mg/dL</td>
+            </tr>
+        </table>
+        <br>
+
+        <h2>Prediction</h2>
+        <p class="prediction">{{prediction}}</p>
+        <div class="right"> <a href="/">Back to Form</a> </div>
+        
+    </div>
+</body>
+</html>
+
