@@ -1,0 +1,5 @@
+Step 1: Firstly create an environment
+
+
+Step 2: Install all the libraries from requirements to that environment
+
