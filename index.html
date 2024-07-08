@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 >Diabetes Predictor</h1>
+        <form id="patientForm" method="post" action="/submit">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required >
+                <option value="" selected disabled hidden>Select your gender</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="hypertension">Hypertension:</label>
+            <select id="hypertension" name="hypertension" required>
+                <option value="" selected disabled hidden>Select (Yes/No)</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+
+            <label for="heart_disease">Heart Disease:</label>
+            <select id="heart_disease" name="heart_disease" required>
+                <option value="" selected disabled hidden>Select (Yes/No)</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+
+            <label for="smoking_history">Smoking History:</label>
+            <select id="smoking_history" name="smoking_history" required>
+                <option value="" selected disabled hidden>Select </option>
+                <option value="No info">No info</option>
+                <option value="Current">Current</option>
+                <option value="Former">Former</option>
+                <option value="Never">Never</option>
+            </select><br><br>
+
+            <label for="bmi">BMI (kg/m<sup>2</sup>):</label>
+            <input type="number" id="bmi" name="bmi" step="0.01" required><br><br>
+
+            <label for="hba1c">HbA1c level (%):</label>
+            <input type="number" id="hba1c" name="hba1c" step="0.01" required><br><br>
+
+            <label for="glucose">Glucose level (mg/dL):</label>
+            <input type="number" id="glucose" name="glucose" required><br><br>
+            
+            <div class="button">
+                <button type="reset" onclick="resetForm()">Reset</button>
+                <button type="submit">Submit Data</button>
+            </div>
+        </form>
+
+        
+    </div>
+
+    <script>
+        function resetForm() {
+            document.getElementById("name").value = "";
+            document.getElementById("gender").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("hypertension").value = "";
+            document.getElementById("heart_disease").value = "";
+            document.getElementById("smoking_history").value = "";
+            document.getElementById("bmi").value = "";
+            document.getElementById("hba1c").value = "";
+            document.getElementById("glucose").value = "";
+            document.getElementById("result").style.display = "none";
+        }
+    </script>
+</body>
+</html>
