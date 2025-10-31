@@ -30,8 +30,8 @@ A machine‑learning web application to predict the likelihood of diabetes based
    ```
 2. Create and activate a virtual environment (highly recommended):  
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate   # On Windows: venv\Scripts\activate
+   python -m venv venv
+   source venv/bin/activate   # On Windows: venv/Scripts/activate
    ```
 3. Install dependencies:  
    ```bash
