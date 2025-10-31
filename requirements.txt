@@ -5,3 +5,4 @@ imbalanced-learn == 0.10.1
 xgboost == 2.0.3
 seaborn == 0.13.1
 matplotlib == 3.7.1
+flask
